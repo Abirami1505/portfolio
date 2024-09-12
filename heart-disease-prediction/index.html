@@ -1,0 +1,33 @@
+<html>
+<head>
+<title> Heart Disease Prediction</title>
+</head>
+
+<body style="background: lavender; color: purple; font-family:Garamond; font-size:20">
+<div class="login">
+<center><h1 style="color: purple; font-family: Harrington">Heart Disease Prediction</h1></center>
+<form action="{{url_for('predict')}}"method='post'>
+Enter info:<br>
+<p align="justify">
+Age:<input type="text" name="age" required="required"/><br><br>
+Sex:<input type="radio" id="male" name="sex" value="1" required="required"/><label for="male">male</label>
+<input type="radio" id="female" name="sex" value="0" required="required"/><label for="male">female</label><br><br>
+Cp:<input type="text" name="cp" required="required"/><br><br>
+Trestbps:<input type="text" name="trestbps" required="required"/><br><br>
+Chol:<input type="text" name="chol" required="required"/><br><br>
+Fbs:<input type="text" name="fbs" required="required"/><br><br>
+Restecg:<input type="text" name="restecg" required="required"/><br><br>
+Thalac:<input type="text" name="thalac" required="required"/><br><br>
+Exang:<input type="text" name="exang" required="required"/><br><br>
+Oldpeak:<input type="text" name="oldpeak" required="required"/><br><br>
+Slope:<input type="text" name="slope" required="required"/><br><br>
+Ca:<input type="text" name="ca" required="required"/><br><br>
+Thal:<input type="text" name="thal" required="required"/><br><br>
+</p>
+<button type="submit" class="btn btn-primary btn-block btn-large"> Predict heart disease </button>
+</form>
+<h3 style="color:Violet;">
+{{ prediction_text }}</h3>
+</div>
+</body>
+</html>
